@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 CNTX=users 
 NAME=IBM-EPBL
 max=140
