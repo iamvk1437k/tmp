@@ -1,0 +1,9 @@
+#!/bin/bash
+CNTX=users 
+NAME=IBM-EPBL
+max=140
+for i in `seq 2 $max`
+    do
+            curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=100" | grep -e 'clone_url*' | cut -d \" -f 4 | xargs -L1 git clone --depth 1 
+            echo -e "\e[1;31m Page No . $i Done    \e[0m" 
+            done
